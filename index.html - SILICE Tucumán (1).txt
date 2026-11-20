@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SILICE Tucumán: mantenimiento industrial, soluciones integrales para empresas e instituciones.">
+  <title>SILICE Tucumán | Mantenimiento Industrial</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --azul: #0f3d6e;
+      --azul-claro: #1e6bb8;
+      --amarillo: #f5b700;
+      --verde: #25d366;
+      --texto: #1f2937;
+      --fondo: #f4f6f9;
+    }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 6%;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+    .logo { font-weight: 800; font-size: 1.4rem; color: var(--azul); letter-spacing: 1px; }
+    .logo span { color: var(--amarillo); }
+    nav ul { list-style: none; display: flex; gap: 22px; }
+    nav a { text-decoration: none; font-weight: 500; }
+    nav a:hover { color: var(--azul-claro); }
+    .hero {
+      background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+      color: #fff;
+      text-align: center;
+      padding: 110px 20px;
+    }
+    .hero .tag {
+      display: inline-block;
+      background: var(--amarillo);
+      color: var(--azul);
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 14px; }
+    .hero p { font-size: 1.15rem; opacity: 0.92; max-width: 700px; margin: 0 auto; }
+    .botones { margin-top: 30px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 13px 28px; border-radius: 999px;
+      text-decoration: none; font-weight: 700; transition: transform 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-wa { background: var(--verde); color: #fff; }
+    .btn-ig { background: #fff; color: var(--azul); }
+    main { max-width: 1100px; margin: 0 auto; padding: 70px 20px; }
+    section + section { margin-top: 80px; }
+    h2 { text-align: center; font-size: 2.1rem; color: var(--azul); margin-bottom: 12px; }
+    .subtitulo { text-align: center; color: #6b7280; margin-bottom: 40px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: #fff; padding: 28px; border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+      border-top: 4px solid var(--amarillo);
+    }
+    .card h3 { color: var(--azul); margin-bottom: 8px; }
+    .nosotros {
+      background: #fff; border-radius: 18px; padding: 40px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+      font-size: 1.05rem;
+    }
+    .nosotros p + p { margin-top: 14px; }
+    .datos {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px; margin-top: 26px; text-align: center;
+    }
+    .datos div { background: var(--fondo); border-radius: 12px; padding: 18px; }
+    .datos strong { display: block; font-size: 1.5rem; color: var(--azul); }
+    .trabajos li {
+      list-style: none;
+      background: #fff; padding: 16px 20px; border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .trabajos ul { display: grid; gap: 12px; }
+    .trabajos li strong { color: var(--azul); }
+    form {
+      max-width: 520px; margin: 0 auto;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    input, textarea, select {
+      padding: 12px 14px; border: 1px solid #d1d5db; border-radius: 10px;
+      font-size: 1rem; font-family: inherit; background: #fff;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button {
+      padding: 13px; background: var(--azul); color: #fff; border: none;
+      border-radius: 10px; font-size: 1rem; font-weight: 700; cursor: pointer;
+    }
+    button:hover { background: var(--azul-claro); }
+    #msg { text-align: center; margin-top: 16px; color: #059669; font-weight: 600; }
+    footer {
+      text-align: center; padding: 30px 20px;
+      background: var(--azul); color: #dbeafe; font-size: 0.92rem;
+    }
+    footer a { color: var(--amarillo); }
+    @media (max-width: 700px) {
+      nav ul { display: none; }
+      .hero h1 { font-size: 2.1rem; }
+      .nosotros { padding: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">SILI<span>CE</span></div>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <span class="tag">📍 Tucumán, Argentina</span>
+    <h1>Mantenimiento Industrial</h1>
+    <p>Somos expertos en soluciones integrales para empresas e instituciones. Potencia, precisión y compromiso en cada trabajo.</p>
+    <div class="botones">
+      <a class="btn btn-wa" href="https://wa.me/5493815995267" target="_blank" rel="noopener">💬 Escribinos por WhatsApp</a>
+      <a class="btn btn-ig" href="https://www.instagram.com/silice_solucionesyservicios" target="_blank" rel="noopener">📸 Instagram</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+      <p class="subtitulo">Soluciones integrales para instalaciones industriales e institucionales</p>
+      <div class="cards">
+        <div class="card">
+          <h3>⚙️ Equipos de lavandería industrial</h3>
+          <p>Mantenimiento y reparación de lavadoras, secadoras y centrífugas industriales.</p>
+        </div>
+        <div class="card">
+          <h3>🔧 Reparación de equipos</h3>
+          <p>Reparación de heladeras y equipos de refrigeración en hospitales e instituciones.</p>
+        </div>
+        <div class="card">
+          <h3>⚡ Electricidad y electrónica</h3>
+          <p>Control, reparación y mantenimiento de placas y tableros eléctricos.</p>
+        </div>
+        <div class="card">
+          <h3>🏛️ Impermeabilización</h3>
+          <p>Impermeabilización de cúpulas, techos y estructuras en edificios públicos y privados.</p>
+        </div>
+        <div class="card">
+          <h3>🌳 Poda en altura</h3>
+          <p>Trabajos de poda en altura con personal capacitado para instalaciones de todo tipo.</p>
+        </div>
+        <div class="card">
+          <h3>🦟 Control de plagas</h3>
+          <p>Aplicación de insecticida con termoniebla para el control de mosquitos y vectores.</p>
+        </div>
+        <div class="card">
+          <h3>🚰 Plomería</h3>
+          <p>Trabajos de plomería y reparaciones sanitarias para empresas e instituciones.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <h2>Quiénes somos</h2>
+      <p class="subtitulo">Expertos en mantenimiento industrial en Tucumán</p>
+      <div class="nosotros">
+        <p>En <strong>SILICE</strong> nos dedicamos al mantenimiento industrial, ofreciendo soluciones integrales para empresas e instituciones de Tucumán y alrededores.</p>
+        <p>Contamos con personal técnico capacitado y un enfoque en la calidad, la seguridad y la puntualidad en cada trabajo, desde equipos industriales hasta obras de infraestructura.</p>
+        <div class="datos">
+          <div><strong>7+</strong>Servicios técnicos</div>
+          <div><strong>Tucumán</strong>Cobertura local</div>
+          <div><strong>100%</strong>Compromiso</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trabajos">
+      <h2>Trabajos realizados</h2>
+      <p class="subtitulo">Algunos de nuestros proyectos recientes</p>
+      <div class="trabajos">
+        <ul>
+          <li><strong>Impermeabilización de la cúpula del Teatro TINA</strong> – Tucumán</li>
+          <li><strong>Poda en altura</strong> – Hospital Zenón Santillán, Tucumán</li>
+          <li><strong>Mantenimiento y reparación de lavadoras y secadoras industriales</strong></li>
+          <li><strong>Centrífugas industriales</strong> – potencia y precisión en cada ciclo</li>
+          <li><strong>Reparación de heladeras</strong> – Hospital Ángel C. Padilla</li>
+          <li><strong>Aplicación de termoniebla</strong> – OSSACRA, control de mosquitos</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p class="subtitulo">Pedí tu presupuesto sin compromiso</p>
+      <form id="form">
+        <input type="text" id="nombre" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+        <input type="tel" id="telefono" placeholder="Tu teléfono">
+        <textarea id="mensaje" placeholder="Contanos qué necesitás" required></textarea>
+        <button type="submit">Enviar consulta</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>SILICE Tucumán</strong> · Mantenimiento Industrial</p>
+    <p>📍 Tucumán · 📩 <a href="https://wa.me/5493815995267" target="_blank" rel="noopener">WhatsApp +54 9 381 599-5267</a></p>
+    <p>&copy; 2026 SILICE Soluciones y Servicios. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      document.getElementById('msg').textContent = '¡Gracias, ' + nombre + '! Recibimos tu consulta, te contactaremos pronto.';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
